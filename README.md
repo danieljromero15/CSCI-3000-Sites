@@ -1,4 +1,4 @@
-Sites available at https://github.com/danieljromero15/CSCI3000-Websites
+Sites available at https://danieljromero15.github.io/CSCI3000-Websites/
 
 CSCI 3000 - Web Programming
 
