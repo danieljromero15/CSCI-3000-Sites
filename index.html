@@ -2,10 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Zybooks Websites Directory</title>
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 1em;
+        }
+
+        .dropdown {
+            position: relative;
+            display: block;
+        }
+
+        .dropdown-content {
+            padding-left: 20px;
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        #source_note_footer {
+            position: absolute;
+            bottom: 5px;
+        }
+    </style>
+    <script>
+        function dropdown(id) {
+            document.getElementById(id).classList.toggle("show");
+            if (document.getElementById(id).classList.contains('show')) {
+                document.getElementById(id).parentElement.getElementsByClassName("dropdownArrow")[0].innerHTML = "&or;";
+            } else {
+                document.getElementById(id).parentElement.getElementsByClassName("dropdownArrow")[0].innerHTML = "&gt;";
+            }
+        }
+    </script>
 </head>
 <body>
-<p>Hello World</p>
+
+<h2>Zybooks Labs</h2>
+
+<div class="dropdown">
+    <button onclick="dropdown(chapter2.id)"><span class="dropdownArrow">&gt;</span>&nbsp;Chapter 2</button>
+    <div class="dropdown-content" id="chapter2">
+        <a href="Labs/2.10 News article/index.html">2.10 News article</a><br>
+        <a href="Labs/2.12 Photo gallery table/index.html">2.12 Photo gallery table</a><br>
+        <a href="Labs/2.14 HTML practice/index.html">2.14 HTML practice</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button onclick="dropdown(chapter3.id)"><span class="dropdownArrow">&gt;</span>&nbsp;Chapter 3</button>
+    <div class="dropdown-content" id="chapter3">
+        <a href="Labs/3.9 Fan Webpage/index.html">3.9 Fan Webpage</a><br>
+        <a href="Labs/3.10 Form for joining a social network/index.html">3.10 Form for joining a social network</a><br>
+        <a href="Labs/3.11 Happy Birthday message creator/index.html">3.11 Happy Birthday message creator</a><br>
+        <a href="Labs/3.12 Starting lineup/index.html">3.12 Starting lineup</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button onclick="dropdown(chapter4.id)"><span class="dropdownArrow">&gt;</span>&nbsp;Chapter 4</button>
+    <div class="dropdown-content" id="chapter4">
+        <a href="Labs/4.8 News article/index.html">4.8 News article</a><br>
+        <a href="Labs/4.9 Auto loan/index.html">4.9 Auto loan</a><br>
+        <a href="Labs/4.10 Sleep recommendation list/recommend.html">4.10 Sleep recommendation list</a><br>
+        <a href="Labs/4.11 Best-selling video games table/bestgames.html">4.11 Best-selling video games table</a><br>
+        <a href="Labs/4.12 Style the form with advanced selectors/rate.html">4.12 Style the form with advanced
+            selectors</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button onclick="dropdown(chapter5.id)"><span class="dropdownArrow">&gt;</span>&nbsp;Chapter 5</button>
+    <div class="dropdown-content" id="chapter5">
+        <a href="Labs/5.9 CSS practice/index.html">5.9 CSS practice</a><br>
+        <a href="Labs/5.10 Recipe with flexbox/oatmeal_cookies.html">5.10 Recipe with flexbox</a><br>
+        <a href="Labs/5.11 Tic-tac-toe game with grid layout/tic-tac-toe.html">5.11 Tic-tac-toe game with grid
+            layout</a><br>
+        <a href="Labs/5.12 Position the playing cards/cards.html">5.12 Position the playing cards</a><br>
+        <a href="Labs/5.13 Animating the answer/question.html">5.13 Animating the answer</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button onclick="dropdown(chapter6.id)"><span class="dropdownArrow">&gt;</span>&nbsp;Chapter 6</button>
+    <div class="dropdown-content" id="chapter6">
+        <a href="Labs/6.15 JavaScript loops/index.html">6.15 JavaScript loops</a><br>
+        <a href="Labs/6.16 JavaScript password strength/index.html">6.16 JavaScript password strength</a><br>
+        <a href="Labs/6.17 JavaScript number guessing game/index.html">6.17 JavaScript number guessing game</a><br>
+        <a href="Labs/6.18 JavaScript arrays/index.html">6.18 JavaScript arrays</a><br>
+        <a href="Labs/6.19 JavaScript game object/index.html">6.19 JavaScript game object</a><br>
+        <a href="Labs/6.20 JavaScript maps/index.html">6.20 JavaScript maps</a>
+    </div>
+</div>
+
+<p id="source_note_footer">All source code is available at <a
+        href="https://github.com/danieljromero15/CSCI3000-Websites">https://github.com/danieljromero15/CSCI3000-Websites</a>
+</p>
 
 </body>
 </html>
