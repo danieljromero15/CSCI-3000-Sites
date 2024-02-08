@@ -90,6 +90,7 @@ function boardButtonClicked(button) {
         button.innerHTML = "X";
         button.setAttribute("class", "x");
     } else {
+        //disableButtons();
         button.innerHTML = "O"
         button.setAttribute("class", "o");
     }
@@ -106,14 +107,14 @@ function switchTurn() {
         playerTurn = !playerTurn;
         if (playerTurn) {
             turnInfo.innerText = "Your turn";
+            enableButtons();
         } else {
             turnInfo.innerText = "Computer's turn";
+            disableButtons();
         }
     } else {
         playerTurn = false;
-        getGameBoardButtons().forEach((boardButton) => {
-            boardButton.setAttribute("disabled", "true");
-        });
+        disableButtons();
         switch (checkForWinner()) {
             case gameStatus.DRAW_GAME:
                 turnInfo.innerText = "Draw game"
@@ -137,4 +138,17 @@ function makeComputerMove() {
         let buttonChosen = availableButtons[Math.floor(Math.random() * availableButtons.length)];
         boardButtonClicked(buttonChosen);
     }
+}
+
+function disableButtons(){
+    getGameBoardButtons().forEach((boardButton) => {
+        boardButton.setAttribute("disabled", "true");
+    });
+}
+
+function enableButtons(){
+    let availableButtons = document.querySelectorAll("#gameBoard > button:not(.x):not(.o)")
+    availableButtons.forEach((boardButton) => {
+        boardButton.removeAttribute("disabled");
+    })
 }
